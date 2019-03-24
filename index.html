@@ -3,9 +3,14 @@
         <title>File saver</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     </head>
-    <body style="background-image: url('2.jpg');background-color:orange">
+    <body>
+       <div ng-app="" ng-init="count=0;colors=['LIGHTCORAL','SALMON','DARKSALMON','LIGHTSALMON','CRIMSON','RED','FIREBRICK','DARKRED','PINK','LIGHTPINK','HOTPINK','DEEPPINK','MEDIUMVIOLETRED','PALEVIOLETRED','LIGHTSALMON','CORAL','TOMATO','ORANGERED','DARKORANGE','ORANGE','GOLD','YELLOW','LIGHTYELLOW','LEMONCHIFFON','LIGHTGOLDENRODYELLOW','PAPAYAWHIP','MOCCASIN','PEACHPUFF','PALEGOLDENROD','KHAKI','DARKKHAKI','LAVENDER','THISTLE','PLUM','VIOLET','ORCHID','FUCHSIA','MAGENTA','MEDIUMORCHID','MEDIUMPURPLE','REBECCAPURPLE','BLUEVIOLET','DARKVIOLET','DARKORCHID','DARKMAGENTA','PURPLE','INDIGO','SLATEBLUE','DARKSLATEBLUE','MEDIUMSLATEBLUE','GREENYELLOW','CHARTREUSE','LAWNGREEN','LIME','LIMEGREEN','PALEGREEN','LIGHTGREEN','MEDIUMSPRINGGREEN','SPRINGGREEN','MEDIUMSEAGREEN','SEAGREEN','FORESTGREEN','GREEN','DARKGREEN','YELLOWGREEN','OLIVEDRAB','OLIVE','DARKOLIVEGREEN','MEDIUMAQUAMARINE','DARKSEAGREEN','LIGHTSEAGREEN','DARKCYAN','TEAL','AQUA','CYAN','LIGHTCYAN','PALETURQUOISE','AQUAMARINE','TURQUOISE','MEDIUMTURQUOISE','DARKTURQUOISE','CADETBLUE','STEELBLUE','LIGHTSTEELBLUE','POWDERBLUE','LIGHTBLUE','SKYBLUE','LIGHTSKYBLUE','DEEPSKYBLUE','DODGERBLUE','CORNFLOWERBLUE','MEDIUMSLATEBLUE','ROYALBLUE','BLUE','MEDIUMBLUE','DARKBLUE','NAVY','MIDNIGHTBLUE','CORNSILK','BLANCHEDALMOND','BISQUE','NAVAJOWHITE','WHEAT','BURLYWOOD','TAN','ROSYBROWN','SANDYBROWN','GOLDENROD','DARKGOLDENROD','PERU','CHOCOLATE','SADDLEBROWN','SIENNA','BROWN','MAROON','WHITE','SNOW','HONEYDEW','MINTCREAM','AZURE','ALICEBLUE','GHOSTWHITE','WHITESMOKE','SEASHELL','BEIGE','OLDLACE','FLORALWHITE','IVORY','ANTIQUEWHITE','LINEN','LAVENDERBLUSH','MISTYROSE','GAINSBORO','LIGHTGRAY','SILVER','DARKGRAY','GRAY','DIMGRAY','LIGHTSLATEGRAY','SLATEGRAY','DARKSLATEGRAY','BLACK']"  ng-mouseover="count=count+1">
+       <div style="background-color: {{colors[count%141]}}">
+       <div style="background-color: orange" class="container">
         <br>
+           <br>
             <form action="saver.php" method="post" enctype="multipart/form-data">
                 <div class="row col-sm-12">
                     <div class="col-sm-4"> <label>Select file (max limit 210M.B):</label> </div>
@@ -19,7 +24,7 @@
                 <br><br>
                 <br>
                 <div class="row col-sm-10">
-                    <div class="col-sm-3"><label> Enter File Name:</div></label>
+                    <div class="col-sm-3"><label> Enter File Name:</label></div>
                     <div class="col-sm-4"> <input class="col-sm-6" type="text" name="file_name"></div>
                     <div class="col-sm-3"> <input type="submit" class="btn btn-primary" value="Save" name="file"></div>
                 </div>
@@ -30,6 +35,9 @@
                 </div>
                 <br><br><br>
             </form>
+    </div>
+           </div>
+        </div>
             <script>
                 <!-- jQuery library -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

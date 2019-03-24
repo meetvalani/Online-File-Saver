@@ -25,7 +25,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        $msg= "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        $msg= "The file '". $target_file . "' has been uploaded at : '".$_SERVER['HTTP_HOST']."/datasaver/".$target_file."'";
     } else {
         $uploadOk=0;
         $msg= "Sorry, there was an error uploading your file.";

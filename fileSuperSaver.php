@@ -1,4 +1,5 @@
 <?php
+    $target_file=$_POST["file_name"];
 	if($_POST["file_name"]!="")
 	{
 		$okName=1;
@@ -14,7 +15,7 @@
 	if($okName==1)
 	{
 		$uploadOk=1;
-		$msg="File Saved.......(:";
+		$msg= "The file '". $target_file . "' has been uploaded at : '".$_SERVER['HTTP_HOST']."/datasaver/".$target_file."'";
 		$target_file=$_POST["file_name"];
 		if (file_exists($target_file)) {
 			$msg= "Sorry, file already exists.<br> Try some different name...):";
@@ -68,7 +69,7 @@
 					<form method="POST" action="index.html">
 						<br>
 						<input type="submit" class="btn btn-danger" name="Go Back" value="Cancel">
-					</from>
+					</form>
 				</div>
 				<?php }
 				else
