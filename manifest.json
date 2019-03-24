@@ -1,0 +1,25 @@
+{
+    "short_name": "Data Saver",
+    "name": "Data Saver",
+    "icons": [
+      {
+        "src": "/datasaver/img/nlogo_icon.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "/datasaver/img/nlogo_icon.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "/datasaver/img/nlogo_icon.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }
+    ],
+    "start_url": "/datasaver/index.html",
+    "background_color": "#FFFFFF",
+    "theme_color": "BLUE",
+    "display": "standalone"
+  }
