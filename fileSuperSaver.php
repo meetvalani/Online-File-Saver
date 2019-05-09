@@ -66,7 +66,7 @@
 						<br>
 						<div align="center"><input type="submit" class="btn btn-primary" name="file" value="Save With New Name"></div>
 					</form>
-					<form method="POST" action="index.html">
+					<form method="POST" action="index.php">
 						<br>
 						<input type="submit" class="btn btn-danger" name="Go Back" value="Cancel">
 					</form>
@@ -75,7 +75,7 @@
 				else
 					{
 			?>
-				<form method="POST" action="index.html">
+				<form method="POST" action="index.php">
    					<input type="submit" class="btn btn-success" name="Go Back" value="Go Back">
 				</form>
 					<?php } ?>

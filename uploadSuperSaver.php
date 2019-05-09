@@ -53,7 +53,7 @@ if ($uploadOk == 0) {
 		<div align="center" class="">
 			<h1><?php echo $msg;?></h1>
 			<br><br>
-			<form method="POST" action="index.html">
+			<form method="POST" action="index.php">
    				<input type="submit" class="btn btn-primary" name="Go Back" value="Go Back">
 			</form>
         </div>
