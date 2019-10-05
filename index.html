@@ -13,6 +13,7 @@
         <br>
            <br>
             <form action="saver.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="exp" id="exp1" value="week">
                 <div class="row col-sm-12">
                     <div class="col-sm-4"> <label>Select file (max limit 210M.B):</label> </div>
                     <div class="col-sm-4"> <input type="file" name="fileToUpload" id="fileToUpload"></div>
@@ -20,10 +21,20 @@
                 </div>
                 <br><br>
             </form>
+            <form action="#" id="myForm">
+                <div onchange="value_setter()">
+                    <b><p>Please select expiry date of file:</p></b>
+                    <input type="radio" name="expt" value="minute">1 Minute
+                    <input type="radio" name="expt" value="week">1 Week
+                    <input type="radio" name="expt" value="month">1 Month   
+                    <input type="radio" name="expt" value="year" checked>1 Year  
+                </div>
+            </form>
             <form action="saver.php" method="POST">
                 <div class="col-sm-12" style="background-color:orangered"><h4>Or Save File with any extension manualy....</h4></div>
                 <br><br>
                 <br>
+                <input type="hidden" name="exp" id="exp2" value="week">
                 <div class="row col-sm-10">
                     <div class="col-sm-3"><label> Enter File Name:</label></div>
                     <div class="col-sm-4"> <input class="col-sm-6" type="text" name="file_name"></div>
@@ -31,19 +42,25 @@
                 </div>
                 <br>
                 <br>
-                <div class="col-sm-10">
-                    <textarea name="content" style="width:99%; height:450px"></textarea>
+                <textarea name="content" style="width:99%; height:450px"></textarea>
                 </div>
                 <br><br><br>
+                    <div class="col-sm-10">
             </form>
     </div>
            </div>
         </div>
-            <script>
                 <!-- jQuery library -->
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                 <!-- Latest compiled JavaScript -->
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-            </script>
+        <script>
+            function value_setter()
+            {
+                var m=$("#myform input[type='radio']:checked").val();
+                document.getElementById('exp1').value=m;
+                document.getElementById('exp2').value=m;
+            }
+        </script>
     </body>
 </html>
